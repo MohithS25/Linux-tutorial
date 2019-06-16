@@ -72,4 +72,54 @@
 
 --------------------------------------------------------------------------------
 
+->Spaces in names: A space on the command line is how we seperate items. They            are how we know what is the program name and can identify each command          line argument.
+
+->Quotes: Anything inside quotes is considered a single item.
+
+->Escape charactera: Escape characters such as backslash( \ ) are used . What            the backslash does is escape (or nullify) the special meaning of the            next character.
+         Ex- cd Holiday\ Photos
+             Here the special meaning of Photos will be nullified
+
+->Hidden files: If the file or directory's name begins with a .(full stop) then          it is considered to be hidden. Likewise we may rename a hidden file to          remove the . and it will become unhidden. The command ls will not list          hidden files and directories by default. We may modify it by including          the command line option -a so that it does show hidden files and                directories.
+--------------------------------------------------------------------------------
+
+=>MANUAL PAGES:- 
+  -Manual pages are a set of pages that explain every command available on your    system including what they do,the specifics of how you run them and what        command line arguments they accept.
+  -Syntax: 
+          man <command to look up>
+  -Ex:
+    (1) man ls
+    (2) NAME
+    (3) ls - list directory contents
+    (4)
+    (5)  SYNOPSIS
+    (6)  ls [OPTION]... [FILE]...
+    (7)
+    (8)  DESCRIPTION
+    (9)  List  information  about  the FILEs (the current directory by default)    (10)  Sort entries alphabetically if none of -cftuvSUX nor --sort  is                 specified.
+   (11)  Mandatory  arguments  to  long  options are mandatory for short options
+         too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+       ......
+
+  Line 2- Tells us the actual command followed by a simple one line description           of it's function.
+  Line 5- is what's called the synopsis. This is really just a quick overview of          how the command should be run.Square brackets( [ ] ) indicate that              something is optional.
+  Line 8- presents us with a more detailed description of the command.
+  Line 10- onwards Below the description will always be a list of all the                 command line options that are available for the command.
+
+
+ ->To exit man pages press 'q' to quit
+ ->It is possible to do a keyword search on the Manual pages.This can be helpful   if you're not quite sure of what command you may want to use but you know       what you want to achieve.
+   -Syntax:
+           man -k <search term>
+ ->We can use long hand commands or short hand commands to get same output
+   Ex:ls -a and ls --all will give same output
+      -long hand command line options begin with two dashes ( -- ) and short           hand options begin with a single dash ( - )
+--------------------------------------------------------------------------------
+
 
