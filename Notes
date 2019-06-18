@@ -122,4 +122,63 @@
       -long hand command line options begin with two dashes ( -- ) and short           hand options begin with a single dash ( - )
 --------------------------------------------------------------------------------
 
+=>MAKING A DIRECTORY:-
+  -Command is mkdir(make directory)
+  -Syntax:
+          mkdir [options] <Directory>
+  -Some useful options:
+   (1) -p : tells mkdir to make parent directories as needed
+   (2) -v : makes mkdir tell us what it is doing
 
+=>REMOVING A DIRECTORY:-
+  -command to remove a directory is rmdir(remove directory)
+  -Syntax:
+          rmdir [options] <Directory>
+  -rmdir supports the -v and -p options similar to mkdir
+  -A directory must be empty before it can be removed
+
+=>CREATING A BLANK FILE:-
+  -A lot of commands that involve manipulating data within a file have the nice    feature that they will create a file automatically if we refer to it. In fact   we can make use of this very characteristic to create blank files using the     command 'touch'.
+  -Syntax:
+          touch [options] <filename>
+
+  -if we touch a file and it does not exist, the command will do us a favor and    automatically create it for us.
+
+=>COPYING A FILE:-
+  -Command used is 'cp'
+  -We usually use it to duplicate files
+  -Syntax:
+          cp [options] <source> <destination>
+
+  -When we use cp, the destination can be a path to either a file or directory.    If it is to a file then it will create a copy of the source but name the copy   the filename specified in destination. If we provide a directory as the         destination then it will copy the file into that directory and the copy will    have the same name as the source.
+
+  -Using 'cp' will only copy a file. By using '-r' option we can copy              directories.(-r means recursive)
+
+  -Ex: cp foo foo2        //copies only files
+       cp -r foo foo2     //copies directories
+      Any files or directories in foo will get copied to foo2
+
+=>MOVING A FILE:-
+  -Command used is 'mv'
+  -It operates similarly to cp but here we dont need to use -r option
+  -Syntax:
+          mv [options] <source> <destination>
+
+  -Ex: 
+     (1) mkdir backups
+     (2) mv foo2 backups/foo3
+     (3) mv barney backups/
+
+    Line 1: We created a new directory called backups.
+    Line 2: We moved the directory foo2 into the directory backups and renamed              it as foo3
+    Line 3: We moved the file barney into backups. As we did not provide a                  destination name, it will keep the same name.
+
+  -mv can be used to rename files or directories just as in line 2 in the above    example
+
+=>REMOVING A FILE:-
+  -Command used is 'rm'
+  -rmdir can be used only when a directory is empty but rm can be used on          non-empty directories as well.
+  -Once a file is removed or deleted it cannot be undone
+  -Syntax:
+          rm [options] <file>
+--------------------------------------------------------------------------------
