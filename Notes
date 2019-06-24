@@ -181,4 +181,65 @@
   -Once a file is removed or deleted it cannot be undone
   -Syntax:
           rm [options] <file>
+-------------------------------------------------------------------------------
+
+=>TEXT EDITOR:-\
+ ->MODES:
+  -Two modes in Vi: Insert mode and Edit mode
+  -In input mode you may input or enter content into the file and in edit mode     you can move around the file, perform actions such as deleting, copying,        search and replace, saving etc.
+  -We use the 'vi' command to open a file
+  -Syntax: vile <filename>
+  -Ex: vi notes
+        When we run this command it opens up the file. If the file does not             exist then it will create it for you then open it up.
+
+  -When the file opens it opens in the edit mode. We shift into insert mode by     using 'i' button
+  -We can come back to edit mode from the insert mode by pressing escape(Esc)      button.
+  
+ 
+->SAVING AND EXITING:
+   - ZZ used to save and exit
+   - :q! used to discard all changes, since the last save, and exit
+   - :w used to save file but don't exit
+   - :wq used to save and exit
+     [Any command beginning with a colon ( : ) requires you to hit <enter> to         complete the command.]
+
+
+ ->WAYS TO VIEW FILES:
+   -cat command:
+      > cat stands for concatenate
+      > It's main purpose is to join files together but in it's most basic form         it is useful for just viewing files.
+      >Syntax: 
+              cat <file>
+      >This command is nice when we have a small file to view but if the file          is large then most of the content will fly across the screen and we'll          only see the last page of content. For larger files there is a better           suited command which is 'less'.
+
+   -less command:
+      >Syntax:
+              less <file>
+      >less allows you to move up and down within a file using the arrow keys.         You may go forward a whole page using the SpaceBar or back a page by            pressing b. When you are done you can press q for quit.
+ 
+
+ ->NAVIGATING A FILE:
+   (1) ^ (caret) - move cursor to beginning of current line
+   (2) $ - move cursor to end of the current line
+   (3) nG - move to the nth line (eg 5G moves to 5th line)
+   (4) G - move to the last line
+   (5) w - move to the beginning of the next word
+   (6) nw - move forward n word (eg 2w moves two words forwards)
+   (7) b - move to the beginning of the previous word
+   (8) nb - move back n word
+   (9) { - move backward one paragraph
+  (10) } - move forward one paragraph
+  (11) :set nu - to enable line numbers
+
+
+ ->DELETING CONTENT:
+   (1) x - delete a single character
+   (2) nx - delete n characters (eg 5x deletes five characters)
+   (3) dd - delete the current line
+   (4) dn - d followed by a movement command. Delete to where the movement                  command would have taken you. (eg d5w means delete 5 words)
+
+ ->UNDOING:
+   (1) u - Undo the last action
+   (2) U [capital] - Undo all changes to the current line
 --------------------------------------------------------------------------------
+     
